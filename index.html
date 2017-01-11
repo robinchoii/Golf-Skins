@@ -10,54 +10,64 @@
 <body ng-app='myApp'>
   <div class='container'>
     <div class='row'>
-      <div class='col-md-8 md-offset-2 table-reponsive form-group' ng-controller='mainController'>
+      <div class='col-md-6 md-offset-3 table-reponsive form-group' ng-controller='mainController'>
         <table class='table'>
           <th>
-            <td>Name</td>
-            <td>Skins</td>
-            <td>Pars</td>
-            <td>Birdies</td>
-            <td>KPs</td>
-            <td></td>
+            <td><label>Name: </label></td>
+            <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='skins'></td>
+            <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='pars'></td>
+            <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='birdies'></td>
+            <td><label>KPs: </label><input type="number" name="" class='form-control' ng-model='kps'></td>
+            <td><label>Other: </label><input type="number" name="" class='form-control' ng-model='other'></td>
           </th>
           <tbody class='table-striped'>
             <tr>
               <td></td>
-              <td><input class='form-control' type="" name=""></td>
-              <td>5</td>
-              <td>5</td>
-              <td>2</td>
-              <td>0</td>
+              <td><input class='form-control' type="" name="" ng-model='player1.name' placeholder="player1"></td>
+              <td><input class='form-control' type="" name="" ng-model='player1.skin'></td>
+              <td><input class='form-control' type="" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="" name="" ng-model='player1.other'></td>
             </tr>
             <tr>
               <td></td>
-              <td>{{name}}</td>
-              <td>5</td>
-              <td>5</td>
-              <td>2</td>
-              <td>0</td>
+              <td><input class='form-control' type="" name="" ng-model='player2.name'></td>
+              <td><input class='form-control' type="" name="" ng-model='player2.skin'></td>
+              <td><input class='form-control' type="" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="" name="" ng-model='player2.other'></td>
             </tr>
             <tr>
               <td></td>
-              <td>Robin</td>
-              <td>5</td>
-              <td>5</td>
-              <td>2</td>
-              <td>0</td>
+              <td><input class='form-control' type="" name="" ng-model='player3.name'></td>
+              <td><input class='form-control' type="" name="" ng-model='player3.skin'></td>
+              <td><input class='form-control' type="" name="" ng-model='player3.pars'></td>
+              <td><input class='form-control' type="" name="" ng-model='player3.birdies'></td>
+              <td><input class='form-control' type="" name="" ng-model='player3.kps'></td>
+              <td><input class='form-control' type="" name="" ng-model='player3.other'></td>
             </tr>
             <tr>
               <td></td>
-              <td>Robin</td>
-              <td>5</td>
-              <td>5</td>
-              <td>2</td>
-              <td>0</td>
+              <td><input class='form-control' type="" name="" ng-model='player4.name'></td>
+              <td><input class='form-control' type="" name="" ng-model='player4.skins'></td>
+              <td><input class='form-control' type="" name="" ng-model='player4.pars'></td>
+              <td><input class='form-control' type="" name="" ng-model='player4.birdies'></td>
+              <td><input class='form-control' type="" name="" ng-model='player4.kps'></td>
+              <td><input class='form-control' type="" name="" ng-model='player4.other'></td>
             </tr>
           </tbody>
         </table>
+        <div ng-repeat='player in players'>
+        </div>
+          {{player4.skins}}
+          {{player4.name}}
+
       </div>
     </div>
   </div>
+
   <script src="./node_modules/angular/angular.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="./javascript/main.js" type="text/javascript"></script>

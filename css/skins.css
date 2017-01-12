@@ -1,0 +1,21 @@
+body {
+  background-image: url('../images/golf.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+}
+
+h1  {
+  font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+table {
+  background: white;
+  opacity: .9;
+}
+
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}

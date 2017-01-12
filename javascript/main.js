@@ -56,4 +56,8 @@ app.controller('mainController',function($scope) {
     var total= $scope.player1.skins * $scope.settings.skin + $scope.player1.pars * $scope.settings.par + $scope.player1.birdies * $scope.settings.birdie + $scope.player1.kps * $scope.settings.kp + $scope.player1.other * $scope.settings.other
     return total
   };
+  $scope.clear = function() {
+    $('#golfInfo').find('input').val(0)
+    $('#golfInfo').find('input:text').val('')
+  }
 })

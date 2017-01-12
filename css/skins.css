@@ -13,7 +13,7 @@ h1  {
 
 table {
   background: white;
-  opacity: .9;
+  opacity: .85;
 }
 
 @-moz-document url-prefix() {

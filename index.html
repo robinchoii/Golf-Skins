@@ -13,90 +13,213 @@
     <div class='row'>
       <div class='col-md-8 md-offset-2 table-reponsive' ng-controller='mainController'>
         <h1 class='text-center'>Skin's Game</h1>
-        <table class='table table-condensed' id='golfInfo'>
-          <tr>
-            <td><label>Name: </label></td>
-            <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
-            <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
-            <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
-            <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
-            <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
-          </tr>
-          <tr class=''>
-            <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="player1"></td>
-            <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
-          </tr>
-          <tr class=''>
-            <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="player2"></td>
-            <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
-          </tr>
-          <tr class=''>
-            <td><input class='form-control' type="text" name="" ng-model='player3.name' placeholder="player3"></td>
-            <td><input class='form-control' type="number" name="" ng-model='player3.skins'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player3.pars'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player3.birdies'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player3.kps'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player3.other'></td>
-          </tr>
-          <tr class=''>
-            <td><input class='form-control' type="text" name="" ng-model='player4.name' placeholder="player4"></td>
-            <td><input class='form-control' type="number" name="" ng-model='player4.skins'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player4.pars'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player4.birdies'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player4.kps'></td>
-            <td><input class='form-control' type="number" name="" ng-model='player4.other'></td>
-          </tr>
-        </table>
+        <p>Friendly golf wagering</p>
+        <button class='numberOfPlayers text-center btn btn-success' ng-click='changeTo2Players()'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'></button>
+        <button class='numberOfPlayers text-center btn btn-success' ng-click='changeTo3Players()'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'></button>
+        <button class='numberOfPlayers text-center btn btn-success' ng-click='changeTo4Players()'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'></button>
 
-        <table class='table table-bordered '>
-          <th>
-            <td>{{player1.name | uppercase}}</td>
-            <td>{{player2.name | uppercase}}</td>
-            <td>{{player3.name | uppercase}}</td>
-            <td>{{player4.name | uppercase}}</td>
-            <!-- <td>Net</td> -->
-          </th>
-          <tr class='players'>
-            <td>{{player1.name | uppercase}} owes: </td>
-            <td>${{player1.calculate() - player1.calculate()}}</td>
-            <td>${{player1.calculate() - player2.calculate()}}</td>
-            <td>${{player1.calculate() - player3.calculate()}}</td>
-            <td>${{player1.calculate() - player4.calculate()}}</td>
-            <!-- <td>${{player1.calculate() - player2.calculate() + player1.calculate() - player3.calculate() + player1.calculate() - player4.calculate()}}</td> net -->
-          </tr>
-          <tr class='players'>
-            <td>{{player2.name | uppercase}} owes: </td>
-            <td>${{player2.calculate() - player1.calculate()}}</td>
-            <td>${{player2.calculate() - player2.calculate()}}</td>
-            <td>${{player2.calculate() - player3.calculate()}}</td>
-            <td>${{player2.calculate() - player4.calculate()}}</td>
-            <!-- <td>${{player2.calculate() - player1.calculate() + player2.calculate() - player3.calculate() + player2.calculate() - player4.calculate()}}</td> net-->
-          </tr>
-          <tr class='players'>
-            <td>{{player3.name | uppercase}} owes: </td>
-            <td>${{player3.calculate() - player1.calculate()}}</td>
-            <td>${{player3.calculate() - player2.calculate()}}</td>
-            <td>${{player3.calculate() - player3.calculate()}}</td>
-            <td>${{player3.calculate() - player4.calculate()}}</td>
-            <!-- <td>${{player3.calculate() - player1.calculate() + player3.calculate() - player2.calculate() + player3.calculate() - player4.calculate()}}</td> net-->
-          </tr>
-          <tr class='players'>
-            <td>{{player4.name | uppercase}} owes: </td>
-            <td>${{player4.calculate() - player1.calculate()}}</td>
-            <td>${{player4.calculate() - player2.calculate()}}</td>
-            <td>${{player4.calculate() - player3.calculate()}}</td>
-            <td>${{player4.calculate() - player4.calculate()}}</td>
-            <!-- <td>${{player4.calculate() - player1.calculate() + player4.calculate() - player2.calculate() + player4.calculate() - player2.calculate()}}</td> net-->
-          </tr>
-        </table>
+        <div id='2players' ng-hide='twoPlayers' >
+          <table class='table table-condensed 4players' id='golfInfo '>
+            <tr>
+              <td><label>Name: </label></td>
+              <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
+              <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
+              <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
+              <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
+              <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="P1"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="P2"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
+            </tr>
+          </table>
+
+          <table class='table table-bordered players'>
+            <th>
+              <td>{{player1.name | uppercase}}</td>
+              <td>{{player2.name | uppercase}}</td>
+              <td>Net</td>
+            </th>
+            <tr class='playersRow'>
+              <td>{{player1.name | uppercase}} owes: </td>
+              <td class='pay'>${{player1.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player1.calculate() - player2.calculate()}}</td>
+              <td>${{player1.calculate() - player2.calculate() + player1.calculate() - player3.calculate() + player1.calculate() - player4.calculate()}}</td>
+            </tr>
+            <tr class='playersRow'>
+              <td>{{player2.name | uppercase}} owes: </td>
+              <td class='pay'>${{player2.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player2.calculate() - player2.calculate()}}</td>
+               <td>${{player2.calculate() - player1.calculate() + player2.calculate() - player3.calculate() + player2.calculate() - player4.calculate()}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <div id='3player' ng-hide='threePlayers'>
+          <table class='table table-condensed players' id='golfInfo'>
+            <tr>
+              <td><label>Name: </label></td>
+              <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
+              <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
+              <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
+              <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
+              <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="P1"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="P2"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player3.name' placeholder="P3"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.other'></td>
+            </tr>
+          </table>
+
+          <table class='table table-bordered players'>
+            <th>
+              <td>{{player1.name | uppercase}}</td>
+              <td>{{player2.name | uppercase}}</td>
+              <td>{{player3.name | uppercase}}</td>
+              <td>Net</td>
+            </th>
+            <tr class='playersRow'>
+              <td>{{player1.name | uppercase}} owes: </td>
+              <td class='pay'>${{player1.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player1.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player1.calculate() - player3.calculate()}}</td>
+              <td>${{player1.calculate() - player2.calculate() + player1.calculate() - player3.calculate() + player1.calculate() - player4.calculate()}}</td>
+            </tr>
+            <tr class='playersRow'>
+              <td>{{player2.name | uppercase}} owes: </td>
+              <td class='pay'>${{player2.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player2.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player2.calculate() - player3.calculate()}}</td>
+               <td>${{player2.calculate() - player1.calculate() + player2.calculate() - player3.calculate() + player2.calculate() - player4.calculate()}}</td>
+            </tr>
+            <tr class='playersRow'>
+              <td>{{player3.name | uppercase}} owes: </td>
+              <td class='pay'>${{player3.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player3.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player3.calculate() - player3.calculate()}}</td>
+               <td>${{player3.calculate() - player1.calculate() + player3.calculate() - player2.calculate() + player3.calculate() - player4.calculate()}}</td>
+            </tr>
+          </table>
+        </div>
+
+        <div id='4players' ng-hide='fourPlayers'>
+          <table class='table table-condensed players' id='golfInfo'>
+            <tr>
+              <td><label>Name: </label></td>
+              <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
+              <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
+              <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
+              <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
+              <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="P1"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="P2"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player3.name' placeholder="P3"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player3.other'></td>
+            </tr>
+            <tr class=''>
+              <td><input class='form-control' type="text" name="" ng-model='player4.name' placeholder="P4"></td>
+              <td><input class='form-control' type="number" name="" ng-model='player4.skins'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player4.pars'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player4.birdies'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player4.kps'></td>
+              <td><input class='form-control' type="number" name="" ng-model='player4.other'></td>
+            </tr>
+          </table>
+
+          <table class='table table-bordered players'>
+            <th>
+              <td>{{player1.name | uppercase}}</td>
+              <td>{{player2.name | uppercase}}</td>
+              <td>{{player3.name | uppercase}}</td>
+              <td>{{player4.name | uppercase}}</td>
+              <td>Net</td>
+            </th>
+            <tr class='playersRow'>
+              <td>{{player1.name | uppercase}} owes: </td>
+              <td class='pay'>${{player1.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player1.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player1.calculate() - player3.calculate()}}</td>
+              <td class='pay'>${{player1.calculate() - player4.calculate()}}</td>
+              <td>${{player1.calculate() - player2.calculate() + player1.calculate() - player3.calculate() + player1.calculate() - player4.calculate()}}</td>
+            </tr>
+            <tr class='playersRow'>
+              <td>{{player2.name | uppercase}} owes: </td>
+              <td class='pay'>${{player2.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player2.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player2.calculate() - player3.calculate()}}</td>
+              <td class='pay'>${{player2.calculate() - player4.calculate()}}</td>
+               <td>${{player2.calculate() - player1.calculate() + player2.calculate() - player3.calculate() + player2.calculate() - player4.calculate()}}</td>
+            </tr>
+            <tr class='playersRow'>
+              <td>{{player3.name | uppercase}} owes: </td>
+              <td class='pay'>${{player3.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player3.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player3.calculate() - player3.calculate()}}</td>
+              <td class='pay'>${{player3.calculate() - player4.calculate()}}</td>
+               <td>${{player3.calculate() - player1.calculate() + player3.calculate() - player2.calculate() + player3.calculate() - player4.calculate()}}</td>
+            </tr>
+            <tr class='playersRow'>
+              <td>{{player4.name | uppercase}} owes: </td>
+              <td class='pay'>${{player4.calculate() - player1.calculate()}}</td>
+              <td class='pay'>${{player4.calculate() - player2.calculate()}}</td>
+              <td class='pay'>${{player4.calculate() - player3.calculate()}}</td>
+              <td class='pay'>${{player4.calculate() - player4.calculate()}}</td>
+               <td>${{player4.calculate() - player1.calculate() + player4.calculate() - player2.calculate() + player4.calculate() - player2.calculate()}}</td>
+            </tr>
+          </table>
+        </div>
 
         <button ng-click="clear()" class='btn btn-danger'>Clear</button>
       </div>

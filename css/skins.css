@@ -1,10 +1,12 @@
 body {
   background-image: url('../images/golf.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
+  background-size: cover;
   width: 100%;
   height: auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 h1  {
@@ -14,6 +16,27 @@ h1  {
 table {
   background: white;
   opacity: .85;
+}
+.numberOfPlayers {
+  border: solid 1px none;
+/*  width: 50%;
+  height: auto;*/
+  border-radius: 10px;
+  padding: 3px;
+  display: inline-block;
+  background-color: none;
+
+}
+
+.golfball {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+
+}
+
+th td {
+  font-weight: bolder;
 }
 
 @-moz-document url-prefix() {

@@ -59,5 +59,25 @@ app.controller('mainController',function($scope) {
   $scope.clear = function() {
     $('#golfInfo').find('input').val(0)
     $('#golfInfo').find('input:text').val('')
+    $('.pay').text('')
+  };
+  $scope.twoPlayers = false;
+  $scope.threePlayers = true;
+  $scope.fourPlayers = true;
+
+  $scope.changeTo2Players = function() {
+    $scope.twoPlayers = false;
+    $scope.threePlayers = true;
+    $scope.fourPlayers = true;
+  };
+  $scope.changeTo3Players = function() {
+    $scope.threePlayers = false
+    $scope.twoPlayers = true;
+    $scope.fourPlayers = true;
+  };
+  $scope.changeTo4Players = function() {
+    $scope.fourPlayers = false
+    $scope.twoPlayers = true;
+    $scope.threePlayers = true;
   }
 })

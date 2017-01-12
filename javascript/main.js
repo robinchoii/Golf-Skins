@@ -14,7 +14,10 @@ app.controller('mainController',function($scope) {
     pars: 0,
     birdies: 0,
     kps: 0,
-    other: 0
+    other: 0,
+    calculate: function() {
+      return $scope.player1.skins * $scope.settings.skin + $scope.player1.pars * $scope.settings.par + $scope.player1.birdies * $scope.settings.birdie + $scope.player1.kps * $scope.settings.kp + $scope.player1.other * $scope.settings.other
+    }
   };
   $scope.player2 = {
     name: '',
@@ -22,7 +25,10 @@ app.controller('mainController',function($scope) {
     pars: 0,
     birdies: 0,
     kps: 0,
-    other: 0
+    other: 0,
+    calculate: function() {
+      return $scope.player2.skins * $scope.settings.skin + $scope.player2.pars * $scope.settings.par + $scope.player2.birdies * $scope.settings.birdie + $scope.player2.kps * $scope.settings.kp + $scope.player2.other * $scope.settings.other
+    }
   };
   $scope.player3 = {
     name: '',
@@ -30,7 +36,10 @@ app.controller('mainController',function($scope) {
     pars: 0,
     birdies: 0,
     kps: 0,
-    other: 0
+    other: 0,
+    calculate: function() {
+      return $scope.player3.skins * $scope.settings.skin + $scope.player3.pars * $scope.settings.par + $scope.player3.birdies * $scope.settings.birdie + $scope.player3.kps * $scope.settings.kp + $scope.player3.other * $scope.settings.other
+    }
   };
   $scope.player4 = {
     name: '',
@@ -38,25 +47,13 @@ app.controller('mainController',function($scope) {
     pars: 0,
     birdies: 0,
     kps: 0,
-    other: 0
+    other: 0,
+    calculate: function() {
+      return $scope.player4.skins * $scope.settings.skin + $scope.player4.pars * $scope.settings.par + $scope.player4.birdies * $scope.settings.birdie + $scope.player4.kps * $scope.settings.kp + $scope.player4.other * $scope.settings.other
+    }
   };
-
-  $scope.generate = function() {
-    var skinValue = $scope.settings.skin;
-    var parValue = $scope.settings.par;
-    var birdieValue = $scope.settings.birdie;
-    var kpValue = $scope.settings.kp;
-    var otherValue = $scope.settings.other;
-
-    var player1Total = $scope.player1.skins * skinValue + $scope.player1.pars * parValue + $scope.player1.birdies * birdieValue + $scope.player1.kps * kpValue + $scope.player1.other * otherValue
-    var player2Total = $scope.player2.skins * skinValue + $scope.player2.pars * parValue + $scope.player2.birdies * birdieValue + $scope.player2.kps * kpValue + $scope.player2.other * otherValue
-    var player3Total = $scope.player3.skins * skinValue + $scope.player3.pars * parValue + $scope.player3.birdies * birdieValue + $scope.player3.kps * kpValue + $scope.player3.other * otherValue
-    var player4Total = $scope.player4.skins * skinValue + $scope.player4.pars * parValue + $scope.player4.birdies * birdieValue + $scope.player4.kps * kpValue + $scope.player4.other * otherValue
-
-    console.log(player1Total)
-    console.log(player2Total)
-    console.log(player3Total)
-    console.log(player4Total)
-    console.log($scope.player1)
+  $scope.calculate = function(skins,par,birdies,kps,other) {
+    var total= $scope.player1.skins * $scope.settings.skin + $scope.player1.pars * $scope.settings.par + $scope.player1.birdies * $scope.settings.birdie + $scope.player1.kps * $scope.settings.kp + $scope.player1.other * $scope.settings.other
+    return total
   };
 })

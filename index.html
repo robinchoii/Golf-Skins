@@ -28,27 +28,27 @@
           <table class='table table-condensed 4players' id='golfInfo '>
             <tr>
               <td><label>Name: </label></td>
-              <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
-              <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
-              <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
-              <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
-              <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
+              <td><label>Skins:</label> <input type="number"  min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.skin'></td>
+              <td><label>Pars:</label> <input type="number"  min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.par'></td>
+              <td><label>Birdies:</label> <input type="number"  min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.birdie'></td>
+              <td><label>KPs: </label> <input type="number"  min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.kp'></td>
+              <td><label>Other: </label> <input type="number"  min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="P1"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="P2"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.other'></td>
             </tr>
           </table>
 
@@ -77,35 +77,35 @@
           <table class='table table-condensed players' id='golfInfo'>
             <tr>
               <td><label>Name: </label></td>
-              <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
-              <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
-              <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
-              <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
-              <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
+              <td><label>Skins:</label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.skin'></td>
+              <td><label>Pars:</label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.par'></td>
+              <td><label>Birdies:</label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.birdie'></td>
+              <td><label>KPs: </label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.kp'></td>
+              <td><label>Other: </label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="P1"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="P2"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player3.name' placeholder="P3"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.other'></td>
             </tr>
           </table>
 
@@ -144,43 +144,43 @@
           <table class='table table-condensed players' id='golfInfo'>
             <tr>
               <td><label>Name: </label></td>
-              <td><label>Skins:</label> <input type="number" name="" class='form-control' ng-model='settings.skin'></td>
-              <td><label>Pars:</label> <input type="number" name="" class='form-control' ng-model='settings.par'></td>
-              <td><label>Birdies:</label> <input type="number" name="" class='form-control' ng-model='settings.birdie'></td>
-              <td><label>KPs: </label> <input type="number" name="" class='form-control' ng-model='settings.kp'></td>
-              <td><label>Other: </label> <input type="number" name="" class='form-control' ng-model='settings.other'></td>
+              <td><label>Skins:</label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.skin'></td>
+              <td><label>Pars:</label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.par'></td>
+              <td><label>Birdies:</label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.birdie'></td>
+              <td><label>KPs: </label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.kp'></td>
+              <td><label>Other: </label> <input type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" class='form-control' ng-model='settings.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player1.name' placeholder="P1"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player1.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player1.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player2.name' placeholder="P2"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player2.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player2.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player3.name' placeholder="P3"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player3.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player3.other'></td>
             </tr>
             <tr class=''>
               <td><input class='form-control' type="text" name="" ng-model='player4.name' placeholder="P4"></td>
-              <td><input class='form-control' type="number" name="" ng-model='player4.skins'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player4.pars'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player4.birdies'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player4.kps'></td>
-              <td><input class='form-control' type="number" name="" ng-model='player4.other'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player4.skins'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player4.pars'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player4.birdies'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player4.kps'></td>
+              <td><input class='form-control' type="number" min='0' inputmode='numeric' pattern="[0-9]*" name="" ng-model='player4.other'></td>
             </tr>
           </table>
 

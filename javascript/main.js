@@ -52,7 +52,7 @@ app.controller('mainController',function($scope, $window) {
       return $scope.player4.skins * $scope.settings.skin + $scope.player4.pars * $scope.settings.par + $scope.player4.birdies * $scope.settings.birdie + $scope.player4.kps * $scope.settings.kp + $scope.player4.other * $scope.settings.other
     }
   };
-  $scope.calculate = function(skins,par,birdies,kps,other) {
+  $scope.calculate = function() {
     var total= $scope.player1.skins * $scope.settings.skin + $scope.player1.pars * $scope.settings.par + $scope.player1.birdies * $scope.settings.birdie + $scope.player1.kps * $scope.settings.kp + $scope.player1.other * $scope.settings.other
     return total
   };
@@ -63,7 +63,7 @@ app.controller('mainController',function($scope, $window) {
   // };
   $scope.clear = function() {
    $window.location.reload()
-  }
+  };
   $scope.twoPlayers = false;
   $scope.threePlayers = true;
   $scope.fourPlayers = true;
@@ -82,5 +82,11 @@ app.controller('mainController',function($scope, $window) {
     $scope.fourPlayers = false
     $scope.twoPlayers = true;
     $scope.threePlayers = true;
+  };
+  $scope.totalSkins = function() {
+    return $scope.player1.skins + $scope.player2.skins + $scope.player3.skins + $scope.player4.skins
+  };
+  $scope.flash = function() {
+    $window.alert('Too many skins!')
   }
 })

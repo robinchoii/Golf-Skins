@@ -24,6 +24,11 @@
         <button class='numberOfPlayers text-center btn btn-success' ng-click='changeTo3Players()'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'></button>
         <button class='numberOfPlayers text-center btn btn-success' ng-click='changeTo4Players()'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'><img class='golfball png-circle' src='./images/golfball.png'></button>
 
+        <!-- warning if total skins > 18 -->
+        <div class='alert alert-danger text-center' ng-if='totalSkins() > 18'>
+          <h4>Too many skins! {{flash()}}</h4>
+        </div>
+
         <div id='2players' ng-hide='twoPlayers' >
           <table class='table table-condensed 4players' id='golfInfo '>
             <tr>
@@ -184,7 +189,7 @@
             </tr>
           </table>
 
-          <table class='table table-bordered players'>
+          <table class='table table-bordered players results'>
             <th>
               <td>{{player1.name | uppercase}}</td>
               <td>{{player2.name | uppercase}}</td>

@@ -86,7 +86,4 @@ app.controller('mainController',function($scope, $window) {
   $scope.totalSkins = function() {
     return $scope.player1.skins + $scope.player2.skins + $scope.player3.skins + $scope.player4.skins
   };
-  $scope.flash = function() {
-    $window.alert('Too many skins!')
-  }
 })
